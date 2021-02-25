@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import starfieldbottom from "./imgs/Starfieldbottom.png";
+import Col from 'react-bootstrap/Col';
+import Cockpit from "./Cockpit"
+import Starfield from "./Starfield"
+import Starfieldbase from "./Starfieldbase"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="starfieldbottom" style={{ backgroundImage: `url(${starfieldbottom})` }}>
+      <Starfieldbase />
+      <Starfield />
+      <Cockpit />
     </div>
   );
 }

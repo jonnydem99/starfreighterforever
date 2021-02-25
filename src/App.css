@@ -1,3 +1,79 @@
+.backgroundimg {
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: unset;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+
+  background-repeat: repeat-y;
+
+  animation: backgroundimg-animate 400s linear infinite;
+}
+
+.starfieldbottom {
+  background-size: cover;
+  max-width: 100vw;
+  max-height: 100vh;
+  z-index: -1;
+  background-position: center;
+}
+
+.ship {
+  font-size: x-large;
+}
+
+.Freighterimg {
+  object-fit: scale-down;
+  position: fixed;
+  max-width: 80vw;
+  max-height: 80vh;
+  z-index: 2;
+}
+
+.cont {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  height: 100vh;
+}
+
+body {
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: center;
+  background-attachment: unset;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.StarfieldClass {
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: unset;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+
+  background-repeat: repeat-y;
+
+  animation: Starfield-background 30s linear infinite;
+}
+
+.contain {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  perspective: 400px;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +111,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes Starfield-background {
+  from { background-position: 0 100%; }
+	to { background-position: 0 0; }
+}
+
+@keyframes backgroundimg-animate {
+  from { background-position: 0 100%; }
+	to { background-position: 0 0; }
 }
