@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Freighter from "./Freighter";
+import PopupOne from "./popups/PopupOne";
 
 
 export class Cockpit extends Component {
@@ -13,9 +14,7 @@ export class Cockpit extends Component {
         <div className="ship">
           <Freighter />
         </div>
-        <div>
-          <Freighter />
-        </div>
+          <PopupOne />
       </div>
     );
   }
