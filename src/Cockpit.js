@@ -10,11 +10,16 @@ import PopupData from "./popups/PopupData";
 export class Cockpit extends Component {
   constructor(props) {
     super(props);
-    
+    this.startStopAnimation3 = this.startStopAnimation3.bind(this);
     this.state = {
 
     };
   }
+
+  startStopAnimation3() {
+    this.props.startStopAnimation()
+  };
+
   render() {
     
     return (
@@ -24,8 +29,11 @@ export class Cockpit extends Component {
           <Freighter />
         </div>
           <PopupOne popupvisibleCockpitLevel={this.props.popupvisibleAppLevel}
-          starfieldcountCockpitLevel={this.props.starfieldcountAppLevel}/>
+          starfieldcountCockpitLevel={this.props.starfieldcountAppLevel}
+          startStopAnimation4={this.startStopAnimation3}
+          />
           {console.log("popupvisible Cockpit level? = " + this.props.popupvisibleAppLevel + "   starfieldcount Cockpit Level? = " + this.props.starfieldcountAppLevel )}
+          
       </div>
     );
   }

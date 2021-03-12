@@ -105,6 +105,24 @@ body {
   pointer-events: none;
 }
 
+.buttons-container{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #088036;
+}
+
+.btn {
+  
+  font-family: VT323-Regular;
+  font-size: x-large;
+  color: #088036;
+  border-style:solid;
+  border-color: #088036;
+  background: none;
+  border-radius: 8px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -6,12 +6,14 @@ import Starfield from "./Starfield";
 import Starfieldbase from "./Starfieldbase";
 import React, { Component } from "react";
 import PopupOne from "./popups/PopupOne";
+import AnswerOptions from "./AnswerOptions";
 
 export class App extends Component {
   constructor(props) {
     super(props);
     //this.onAnimationIteration = this.onAnimationIteration.bind(this);
     this.popvisibleChange = this.popvisibleChange.bind(this);
+    this.startStopAnimation = this.startStopAnimation.bind(this);
     this.state = {
       starfieldcount: 0,
       classNames: "",
@@ -19,6 +21,21 @@ export class App extends Component {
       popupvisible: true,
     };
   }
+
+  startStopAnimation() {
+    const { classNames } = this.state;
+
+    /*this.handleChange();*/
+
+    this.setState({ classNames: classNames ? "" : "animation" });
+
+    this.popvisibleChange()
+    
+    
+    setTimeout(() => {
+      console.log("classNames = " + this.state.classNames + " popupvisible = " + this.state.popupvisible);
+    }, 1000);
+  };
 
   popvisibleChange() {
     if (this.state.popupvisible === false){
@@ -56,6 +73,8 @@ export class App extends Component {
         />
 
         <Starfield
+          startStopAnimation={this.startStopAnimation}
+          classNames={this.state.classNames}
           className={`StarfieldClass ${this.state.classNames}`}
           onAnimationIteration={this.onAnimationIteration}
           onAnimationEnd={this.onAnimationEnd}
@@ -64,9 +83,9 @@ export class App extends Component {
           onMotionChange={this.popvisibleChange}
           starfieldcount={this.state.starfieldcount}
         />
-
+        <AnswerOptions />
         <Cockpit
-
+          startStopAnimation={this.startStopAnimation}
           handleClick={this.handleClick}
           popupvisibleAppLevel={this.state.popupvisible}
           starfieldcountAppLevel={this.state.starfieldcount}

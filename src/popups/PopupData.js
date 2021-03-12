@@ -1,8 +1,16 @@
+import Button from "react-bootstrap/Button";
+
 const PopupData = [
     {
+        id:0,
+        title: "gameStart",
+        text: "You are the Custodian. You have been charged with the safe passage of this vessel.",
+        buttons: ""
+      
+    },{
         id:1,
         title: "gameStart",
-        text: "You are the Custodian.",
+        text: "You are the Custodian. 1",
     },
     {
         id:2,

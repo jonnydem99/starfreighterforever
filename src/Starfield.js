@@ -6,16 +6,15 @@ import Starfieldimg from "./imgs/StarfieldLong.png";
 export class Starfield extends Component {
   constructor(props) {
     super(props);
-    /*this.onAnimationIteration = this.onAnimationIteration.bind(this);*/
+    this.onAnimationIteration = this.onAnimationIteration.bind(this);
     /*this.animationinfinitechange = this.animationinfinitechange.bind(this);*/
-    this.startStopAnimation = this.startStopAnimation.bind(this);
+    this.startStopAnimation2 = this.startStopAnimation2.bind(this);
     this.onAnimationStart = this.onAnimationStart.bind(this);
     this.onAnimationEnd = this.onAnimationEnd.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
 
     this.state = {
-      classNames: "",
       animationFinished: false,
       showAnimationStartLabel: false,
       popupvisible: true,
@@ -25,17 +24,8 @@ export class Starfield extends Component {
     this.props.onMotionChange();
   }
 
-  startStopAnimation() {
-    const { classNames } = this.state;
-
-    this.handleChange();
-
-    this.setState({ classNames: classNames ? "" : "animation" });
-    
-    
-    setTimeout(() => {
-      console.log("classNames = " + this.state.classNames + " popupvisible = " + this.state.popupvisible);
-    }, 1000);
+  startStopAnimation2() {
+    this.props.startStopAnimation()
   };
 
   onAnimationStart = () => {
@@ -52,26 +42,25 @@ export class Starfield extends Component {
     });
   };
   handleClick = () => {
-    this.startStopAnimation();
+    this.startStopAnimation2();
     console.log("clicked");
   };
 
-  /*
+  
   onAnimationIteration() {
-    const starfieldcount = this.props.starfieldcount;
     
-      this.startStopAnimation();
+      this.startStopAnimation2();
     
-
+/*
     setTimeout(() => {
       console.log("In Starfield component count = " + this.props.starfieldcount);
-    }, 1000);
+    }, 1000); */
   }
-  */
+  
   render() {
     return (
       <div
-        className={`StarfieldClass ${this.state.classNames}`}
+        className={`StarfieldClass ${this.props.classNames}`}
         onAnimationEnd={this.onAnimationEnd}
         onAnimationStart={this.onAnimationStart}
         onAnimationIteration={this.onAnimationIteration}
@@ -79,9 +68,9 @@ export class Starfield extends Component {
         
 
         
-        <button onClick={() => this.startStopAnimation()}>
+        <button onClick={() => this.startStopAnimation2()}>
           Start/stop the animation
-          {console.log("classNames = " + this.state.classNames)}
+          {console.log("classNames = " + this.props.classNames)}
         </button>
         
       </div>
