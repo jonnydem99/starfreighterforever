@@ -12,7 +12,7 @@ class One extends Component {
       }
     render() {
         return (
-            <div>
+            <div className="buttons-container">
                 <Button
         onClick={() => this.startStopAnimation7()}
       >

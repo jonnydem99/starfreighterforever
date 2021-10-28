@@ -4,13 +4,13 @@ const PopupData = [
     {
         id:0,
         title: "gameStart",
-        text: "You are the Custodian. You have been charged with the safe passage of this vessel.",
+        text: "Welcome to the Star Frieghter Castor. You have been designated as the Custodian for this vessel. As the Castor's Custodian, you are charged with her safe passage. You will also be expected to use your best judgement in all matters related to the Castor as you are representing the Stargazer brand as well as the interest of it's investors.",
         buttons: ""
       
     },{
         id:1,
-        title: "gameStart",
-        text: "You are the Custodian. 1",
+        title: "Human Stowaway",
+        text: "Your scans have indicated there is a life form inside one of the shipping containers aboard the Castor. More detailed scans reveal a small child. A quick look at the cargo manifest reveals that a child was not supposed to be in this container. It is illegal cargo.",
     },
     {
         id:2,

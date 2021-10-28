@@ -17,12 +17,13 @@
   background-image: url('./imgs/GreenTerminalBackground.png');
   z-index: 20;
   position: fixed;
-  background-size: contain;
+  justify-content: center;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 80vw;
-  height: 90vh;
+  height: fit-content;
   margin: auto;
-  font-size: x-large;
+  font-size: 4vh;
   color: #088036;
   
 }
@@ -106,14 +107,17 @@ body {
 }
 
 .buttons-container{
-  align-items: center;
+  
   display: flex;
-  justify-content: center;
+  
+  justify-content: space-evenly;
   color: #088036;
+  margin: 3.5%;
+  margin-bottom: 10%;;
 }
 
 .btn {
-  
+  padding-block: 2%;
   font-family: VT323-Regular;
   font-size: x-large;
   color: #088036;
@@ -121,6 +125,7 @@ body {
   border-color: #088036;
   background: none;
   border-radius: 8px;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
